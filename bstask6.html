@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-label {
+      font-weight: bold;
+    }
+    .form-control:invalid {
+      border-color: #dc3545;
+      background-color: #f8d7da;
+    }
+    .form-control:invalid:focus {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+    }
+    .form-text {
+      color: #dc3545;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2>Signup Form</h2>
+    <form id="signupForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+        <div class="form-text">Name is required</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        <div class="form-text">Email is required</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        <div class="form-text">Password is required</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="hobbies" class="form-label">Hobbies</label>
+        <select class="form-select" id="hobbies" required>
+          <option value="">Select your hobby</option>
+          <option value="reading">Reading</option>
+          <option value="travelling">Travelling</option>
+          <option value="sports">Sports</option>
+        </select>
+        <div class="form-text">Please select a hobby</div>
+      </div>
+
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Simple form validation
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const fields = form.querySelectorAll('input[required], select[required]');
+      let valid = true;
+
+      fields.forEach(field => {
+        if (!field.value) {
+          valid = false;
+          field.classList.add('is-invalid');
+        } else {
+          field.classList.remove('is-invalid');
+        }
+      });
+
+      if (valid) {
+        alert('Form submitted successfully');
+      }
+    });
+  </script>
+</body>
+</html>
