@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Styled Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5a9; /* Light yellow background */
+            color: #6a2c8b; /* Purple text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 150px;
+            background-color: #000;
+            padding: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+            background-color: #444;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #666;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+        }
+
+        /* Footer Styling */
+        footer {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#">Home page</a>
+        <a href="#">Musings</a>
+        <a href="#">My town</a>
+        <a href="#">Links</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>My first styled page</h1>
+        <p>Welcome to my styled page!</p>
+        <p>It lacks images, but at least it has style. And it has links, even if they don't go anywhere...</p>
+        <p>There should be more here, but I don't know what yet.</p>
+        
+        <footer>
+            <p>Made 5 April 2004 by myself.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

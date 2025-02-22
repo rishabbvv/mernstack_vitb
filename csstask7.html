@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Registration Form Container */
+        .register-container {
+            background-color: #8e2a4a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form Fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+
+        /* Register Button */
+        .register-btn {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Your Password" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Other" required> Other</label>
+            </div>
+
+            <!-- Language -->
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <select id="language" required>
+                    <option value="">Select Language</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                </select>
+            </div>
+
+            <!-- Zip Code -->
+            <div class="form-group">
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" placeholder="Your Zip Code" required>
+            </div>
+
+            <!-- About -->
+            <div class="form-group">
+                <label for="about">About:</label>
+                <textarea id="about" placeholder="Write about yourself..." required></textarea>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <div class="footer">
+            <p>By registering, you agree to our terms.</p>
+        </div>
+    </div>
+
+</body>
+</html>
